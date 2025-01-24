@@ -11,7 +11,7 @@ x*)
 	release=$1
 	;;
 esac
-if [ -d nl.cwi.dis.vr2gather.nativelibraries.webrtc/Runtime/Plugins ] ; then
+if [ ! -d nl.cwi.dis.vr2gather.nativelibraries.webrtc/Runtime/Plugins ] ; then
 	echo "Please run this script from the root of the project"
 	exit 1
 fi
