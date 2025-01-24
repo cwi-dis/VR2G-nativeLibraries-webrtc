@@ -4,9 +4,8 @@ using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
 using System.IO;
-using VRT.Core;
 
-namespace VRT.NativeLibraries {
+namespace VRT.NativeLibraries.Webrtc {
     public class CopyNativeDLLs : IPostprocessBuildWithReport
     {
         public int callbackOrder { get { return 0; } }

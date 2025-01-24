@@ -88,8 +88,8 @@
       },
       "url": "https://packages.unity.com"
     },
-    "nl.cwi.dis.vr2gather.nativelibraries": {
-      "version": "file:../../nl.cwi.dis.vr2gather.nativelibraries",
+    "nl.cwi.dis.vr2gather.nativelibraries.webrtc": {
+      "version": "file:../../nl.cwi.dis.vr2gather.nativelibraries.webrtc",
       "depth": 0,
       "source": "local",
       "dependencies": {}

@@ -6,7 +6,7 @@ using UnityEditor;
 using System.Runtime.InteropServices;
 
 
-namespace VRT.NativeLibraries
+namespace VRT.NativeLibraries.Webrtc
 {
     public class VRTNativeLoader : MonoBehaviour
     {
