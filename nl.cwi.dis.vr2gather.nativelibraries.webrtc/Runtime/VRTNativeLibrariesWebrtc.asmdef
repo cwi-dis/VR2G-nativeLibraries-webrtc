@@ -1,5 +1,5 @@
 {
-    "name": "VRTNativeLibraries",
+    "name": "VRTNativeLibrariesWebrtc",
     "rootNamespace": "",
     "references": [],
     "includePlatforms": [
