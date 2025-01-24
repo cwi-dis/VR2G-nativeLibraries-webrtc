@@ -23,7 +23,7 @@ namespace VRT.NativeLibraries.Webrtc
 
         public void Init()
         {
-            Debug.Log("VRTNativeLoader: Init() called");
+            Debug.Log("VRTNativeLoaderWebrtc: Init() called");
 #if UNITY_EDITOR
             string path = UnityEditor.AssetDatabase.GetAssetPath(nativeLibraries);
             platformLibrariesPath = getEditorPlatformLibrariesPath(path);
@@ -32,7 +32,7 @@ namespace VRT.NativeLibraries.Webrtc
 #endif
             if (!Directory.Exists(platformLibrariesPath))
             {
-                Debug.LogError($"VRTNativeLoader: Directory {platformLibrariesPath} does not exist");
+                Debug.LogError($"VRTNativeLoaderWebrtc: Directory {platformLibrariesPath} does not exist");
                 return;
             }
             addPathToDynamicLoaderPath(platformLibrariesPath);
@@ -52,11 +52,11 @@ namespace VRT.NativeLibraries.Webrtc
 #elif UNITY_ANDROID
             platformLibrariesPath = Path.Combine(fullPath, "android-arm");
 #else
-            Debug.LogFatal("VRTNativeLoader: Unknown editor runtime platform");
+            Debug.LogFatal("VRTNativeLoaderWebrtc: Unknown editor runtime platform");
 #endif
-            Debug.Log($"VRTNativeLoader: platform path = {platformLibrariesPath}");
+            Debug.Log($"VRTNativeLoaderWebrtc: platform path = {platformLibrariesPath}");
             platformLibrariesPath = Path.GetFullPath(platformLibrariesPath);
-            Debug.Log($"VRTNativeLoader: abs platform path = {platformLibrariesPath}"); 
+            Debug.Log($"VRTNativeLoaderWebrtc: abs platform path = {platformLibrariesPath}"); 
             return platformLibrariesPath;
 
         }
@@ -100,7 +100,7 @@ namespace VRT.NativeLibraries.Webrtc
             AddDllDirectory(path);
 #endif
             System.Environment.SetEnvironmentVariable(dynPathName, dynamicLoaderPath);
-            Debug.Log($"VRTNativeLoader: {dynPathName} = {dynamicLoaderPath}");
+            Debug.Log($"VRTNativeLoaderWebrtc: {dynPathName} = {dynamicLoaderPath}");
         }
     }
 }
