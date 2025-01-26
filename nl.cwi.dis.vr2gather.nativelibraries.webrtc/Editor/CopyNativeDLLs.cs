@@ -6,16 +6,16 @@ using UnityEngine;
 using System.IO;
 
 namespace VRT.NativeLibraries.Webrtc {
-    public class CopyNativeDLLs : IPostprocessBuildWithReport
+    public class CopyNativeWebrtcDLLs : IPostprocessBuildWithReport
     {
         public int callbackOrder { get { return 0; } }
         public void OnPostprocessBuild(BuildReport report)
         {
-            Debug.LogWarning("xxxjack CopyNativeDLLs.OnPostprocessBuild not implemented yet");
-            var assets = AssetDatabase.FindAssets("t:NativeLibraryDirectory");
+            Debug.LogWarning("xxxjack CopyNativeWebrtcDLLs.OnPostprocessBuild not implemented yet");
+            var assets = AssetDatabase.FindAssets("t:NativeLibraryDirectoryWebrtc");
             if (assets.Length == 0)
             {
-                Debug.LogWarning("No NativeLibraryDirectory found");
+                Debug.LogWarning("No NativeLibraryDirectoryWebrtc found");
                 return;
             }
             foreach(var guid in assets)
@@ -26,7 +26,7 @@ namespace VRT.NativeLibraries.Webrtc {
 
                 if ( string.IsNullOrEmpty(srcDir) || string.IsNullOrEmpty(dstDir) || !Directory.Exists(srcDir) )
                 {
-                    Debug.LogWarning("CopyNativeDLLs.OnPostprocessBuild: No native libraries copied");
+                    Debug.LogWarning("CopyNativeWebrtcDLLs.OnPostprocessBuild: No native libraries copied");
                     return;
                 }
                 CopyFiles(srcDir, dstDir);
@@ -64,7 +64,7 @@ namespace VRT.NativeLibraries.Webrtc {
         }
         void CopyFiles(string srcDir, string dstDir)
         {
-            Debug.Log($"CopyNativeDLLs.CopyFiles src {srcDir} dst {dstDir}");
+            Debug.Log($"CopyNativeWebrtcDLLs.CopyFiles src {srcDir} dst {dstDir}");
             if (!Directory.Exists(dstDir))
             {
                 Directory.CreateDirectory(dstDir);
@@ -78,7 +78,7 @@ namespace VRT.NativeLibraries.Webrtc {
                 string fileName = Path.GetFileName(file);
                 string destFile = Path.Combine(dstDir, fileName);
                 File.Copy(file, destFile, true);
-                Debug.Log($"CopyNativeDLLs.CopyFiles copied {file} to {destFile}");
+                Debug.Log($"CopyNativeWebrtcDLLs.CopyFiles copied {file} to {destFile}");
             }
         }
     }

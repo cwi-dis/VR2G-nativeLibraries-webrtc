@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace VRT.NativeLibraries.Webrtc
 {
-    [CreateAssetMenu(fileName = "LibraryDirectory", menuName = "ScriptableObjects/NativeLibraryDirectoryWebrtc", order = 1)]
-    public class NativeLibraryDirectory : ScriptableObject
+    [CreateAssetMenu(fileName = "LibraryDirectoryWebrtc", menuName = "ScriptableObjects/NativeLibraryDirectoryWebrtc", order = 1)]
+    public class NativeLibraryDirectoryWebrtc : ScriptableObject
     {
 
     }

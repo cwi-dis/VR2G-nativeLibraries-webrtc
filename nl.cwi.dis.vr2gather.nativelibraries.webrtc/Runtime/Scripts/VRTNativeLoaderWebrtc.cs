@@ -14,7 +14,7 @@ namespace VRT.NativeLibraries.Webrtc
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         static extern bool AddDllDirectory(string lpPathName);
 
-        public NativeLibraryDirectory nativeLibraries;
+        public NativeLibraryDirectoryWebrtc nativeLibraries;
         public static string platformLibrariesPath;
         void Awake()
         {
